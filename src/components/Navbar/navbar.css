@@ -1,0 +1,156 @@
+:root {
+  --primaryhijau : #f7fafc;
+  --button: #4faca6;
+  --hover: rgb(240, 217, 190);
+  --font: #91cac1;
+  --white:white;
+  --dark: black;
+  --darktransparent: rgba(0, 0, 0, 0.5);
+  --birumuda: rgb(239,249,255, 100%) ;
+}
+
+.navbar {
+    background-color: var(--white);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .nav-menu {
+    color: var(--button);
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  
+  .nav-links {
+    color: var(--font);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    
+  }
+  
+  .nav-links:hover {
+    background-color: var(--white);
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+  }
+  
+  .fa-bars {
+    color: var(--button);
+  }
+  
+  .nav-links-mobile {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  
+  @media screen and (max-width: 960px) {
+    .NavbarItems {
+      position: relative;
+
+    }
+  
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+      padding-left: 0;
+      background-color: var(--darktransparent);
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 4;
+    }
+  
+    .nav-links {
+      text-align: center;
+      padding: 20px 10vw;
+      width: 100%;
+      display: table;
+      color: var(--white);
+    }
+  
+    .nav-links:hover {
+      background-color:var(--font);
+      color: var(--dark);
+    }
+  
+    .navbar-logo {
+      position: absolute;
+      font-size: 1.2rem;
+      top: 2vh;
+      left: 0;
+      margin-left: 5px;
+      transform: translate(25%, 50%);
+    }
+  
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 1vh;
+      right: 0;
+      transform: translate(-100%, 60%);
+      color: var(--font);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  
+    .fa-times {
+      color: rgb(204, 93, 93);
+      font-size: 1.5rem;
+    }
+
+    .fa-firstdraft{
+      position: absolute;
+    }
+  
+    .nav-links-mobile {
+      display: block;
+      text-align: center;
+      padding: 1rem;
+      margin: 2rem auto;
+      border-radius: 5px;
+      border: 2px solid var(--button) ;
+      background-color:var(--button);
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+    }
+  
+    .nav-links-mobile:hover {
+      background-color: var(--darktransparent);
+      color: var(--button);
+      border: 0.1rem solid var(--button);
+      transition: 250ms;
+    }
+  }

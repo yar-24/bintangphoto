@@ -1,0 +1,51 @@
+:root {
+  --primaryhijau : #f7fafc;
+  --button: #4faca6;
+  --hover: rgb(240, 217, 190);
+  --font: #91cac1;
+  --white:white;
+  --dark: black;
+  --darktransparent: rgba(76, 68, 68, 0.9);
+  --birumuda: rgb(239,249,255, 100%) ;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+    width: 200px;
+    position: absolute;
+    top: 80px;
+    list-style: none;
+    text-align: start;
+    padding-left: 0;
+    z-index: 1;
+  }
+  
+  .dropdown-menu li {
+    color: var(--font);
+    background: var(--white);
+    cursor: pointer;
+  }
+  
+  .dropdown-menu li:hover {
+    background: var(--primaryhijau);
+  }
+  
+  .dropdown-menu.clicked {
+    display: none;
+  }
+  
+  .dropdown-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: var(--font);
+    padding: 16px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .fa-caret-down {
+      display: none;
+    }
+  }

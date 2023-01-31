@@ -1,0 +1,255 @@
+import React from "react";
+import styled from "styled-components";
+import Footer from "../../components/home/Footer";
+import IconCheckList from "../../img/check.svg";
+import { mobile } from "../../responsive";
+import Shake from "react-reveal/Shake";
+import Slide from "react-reveal/Slide";
+import ScrollButton from "../../components/ScrollButton";
+import { Helmet } from "react-helmet";
+
+const Container = styled.div`
+  text-align: center;
+  flex-wrap: wrap;
+  height: 100%;
+  margin: 0px 0 20px;
+  background-color: #f7fafc;
+  ${mobile({ height: "100%", padding: "20px 0px 30px", marginBottom: "20px" })};
+`;
+
+const Title = styled.h1`
+  font-size: 2rem;
+  color: #4faca6;
+  padding: 50px 0 10px;
+  ${mobile({ fontSize: "1.2rem", padding: "20px 0 5px" })};
+`;
+
+const ContainerPrice = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+  ${mobile({ flexDirection: "column", display: "box" })};
+`;
+
+const ContainerHarga = styled.div`
+  height: 100%;
+  width: 25%;
+  border-top: 10px solid #${(props) => props.bg};
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 20px;
+  box-shadow: -1px 3px 21px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 3px 21px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 3px 21px -7px rgba(0, 0, 0, 0.75);
+
+  ${mobile({ height: "100%", width: "80%" })};
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease all;
+  }
+`;
+const WrapperHarga = styled.div`
+  margin: 20px;
+  ${mobile({ margin: "20px" })};
+`;
+const NamaHarga = styled.h2`
+  color: #4faca6;
+  margin-top: 50px;
+  ${mobile({ marginTop: "20px", fontSize: "20px" })};
+`;
+const Desc = styled.h3`
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #4faca6;
+  ${mobile({ marginBottom: "10px" })};
+`;
+const Harga = styled.h2`
+  margin: 20px 0 20px;
+  ${mobile({ margin: "10px 0 10px", fontSize: "20px" })};
+`;
+
+const ContainerButton = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 50px;
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  color: #4faca6;
+  border: 1px solid #4faca6;
+  text-decoration: none;
+  cursor: pointer;
+  ${mobile({ fontSize: ".5rem", height: "40px", margin: "15px 0 25px" })};
+
+  &:hover {
+    background-color: #4faca6;
+    color: #fff;
+  }
+`;
+
+const Button = styled.p`
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  ${mobile({ fontSize: "15px" })};
+`;
+
+const ListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${mobile({ marginTop: "10px" })};
+`;
+
+const ListFasilitas = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+
+`
+
+const Icon = styled.img`
+  width: 25px;
+  margin-right: 20px;
+`
+
+const List = styled.li`
+  margin-left: 10px;
+  list-style: none;
+  ${mobile({ marginLeft: "15px", fontSize: "15px" })};
+`;
+
+const HargaMaternity = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Paket Foto Maternity Termurah, Terbaik, Terbagus 2022</title>
+        <meta
+          name="description"
+          content="Foto maternity atau foto kehamilan kini menjadi trend dibeberapa pasangan suami istri. Masa-masa kehamilan hingga menunggu kelahiran si buah hati bisa kamu abadikan kedalam sebuah foto maternity. Usia 7-8 bulan sering dijadikan waktu yang tepat untuk melakukan sesi foto ini. Namun, banyak juga wanita hamil yang tampak bingung bagaimana berpose saat perut semakin membesar. Nah, Bintang Foto maternity ini lah solusinya"
+        />
+      </Helmet>
+      <Container>
+        <Shake>
+          <Title>Paket Harga Foto Maternity</Title>
+        </Shake>
+        <Slide bottom cascade>
+          <ContainerPrice>
+
+            {/* Silver */}
+
+            <ContainerHarga style={{borderTop: "10px solid silver" }} >
+              <WrapperHarga>
+                <NamaHarga>Silver</NamaHarga>
+                <hr style={{ width: "20%", marginLeft: "0" }} />
+                <Harga>Rp 200.000</Harga>
+                <ContainerButton href="https://rb.gy/ccmuiz">
+                  <Button>Pesan</Button>
+                </ContainerButton>
+                <Desc>Fasilitas</Desc>
+                <ListContainer>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>8x Foto</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>4x Cetak 10R</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>2 Background</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>Standar Concept</List>
+                  </ListFasilitas>
+                </ListContainer>
+              </WrapperHarga>
+            </ContainerHarga>
+
+            {/* Gold */}
+
+            <ContainerHarga style={{borderTop: "10px solid gold" }} >
+              <WrapperHarga>
+                <NamaHarga>Gold</NamaHarga>
+                <hr style={{ width: "20%", marginLeft: "0" }} />
+                <Harga>Rp 350.000</Harga>
+                <ContainerButton href="https://rb.gy/ccmuiz">
+                  <Button>Pesan</Button>
+                </ContainerButton>
+                <Desc>Fasilitas</Desc>
+                <ListContainer>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>10x Foto</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>6x Cetak 10R</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>3 Background</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>Standar Concept</List>
+                  </ListFasilitas>
+                </ListContainer>
+              </WrapperHarga>
+            </ContainerHarga>
+
+            {/* Platinum */}
+
+            <ContainerHarga style={{borderTop: "10px solid #979392" }} >
+              <WrapperHarga>
+                <NamaHarga>File Only</NamaHarga>
+                <hr style={{ width: "20%", marginLeft: "0" }} />
+                <Harga>Rp 400.000</Harga>
+                <ContainerButton href="https://rb.gy/ccmuiz">
+                  <Button>Pesan</Button>
+                </ContainerButton>
+                <Desc>Fasilitas</Desc>
+                <ListContainer>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>15x Foto</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>5x Cetak 10R</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>1x Cetak 12R Frame</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>4 Background</List>
+                  </ListFasilitas>
+                  <ListFasilitas>
+                    <Icon src={IconCheckList} />
+                    <List>Standar Concept</List>
+                  </ListFasilitas>
+                </ListContainer>
+              </WrapperHarga>
+            </ContainerHarga>
+
+          </ContainerPrice>
+        </Slide>
+      </Container>
+      <ScrollButton />
+      <Footer />
+    </>
+  );
+};
+
+export default HargaMaternity;
